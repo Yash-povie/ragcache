@@ -9,5 +9,4 @@ venv/
 *.egg
 .pytest_cache/
 .mypy_cache/
-benchmarks/results/
-*.png
+# keep benchmark results out of gitignore so the graph ships with the repo

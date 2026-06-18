@@ -14,14 +14,16 @@ pip install ragcache[sentence-transformers]
 
 > 1000-query simulation on a realistic enterprise FAQ workload (Zipfian distribution).
 
+![ragcache benchmark — hit rate, latency, cost savings](benchmarks/results/benchmark.png)
+
 | Metric | Without ragcache | With ragcache |
 |---|---|---|
-| Cache hit rate | 0% | **~55%** (stabilizes) |
-| P50 latency | 4,200ms | **12ms** (on hit) |
-| LLM cost per 1000 queries | $4.00 | **$1.80** |
-| Cost reduction | — | **55%** |
+| Cache hit rate | 0% | **96%** (Zipfian workload) |
+| P50 latency | 4,259ms | **12ms** (on hit) |
+| LLM cost per 1000 queries | $4.00 | **$0.16** |
+| Cost reduction | — | **96%** |
 
-*Real support/FAQ bots hit 60–85% because users ask the same questions repeatedly.*
+*Hit rate scales with query repetition. Real enterprise support/FAQ bots: 60–85%. General-purpose assistants: 35–55%.*
 
 ---
 
